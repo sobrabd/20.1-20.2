@@ -139,24 +139,9 @@
 
         <div class="album py-5 bg-body-tertiary">
             <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    {% for object in objects_list %}
-                    <div class="col-4">
-                        <div class="card shadow-sm">
-                            
-                            <div class="card-body">
-                                <p class="card-text">{{object.name}}</p>
-                                <p class="card-text">{{object.description}}</p>
-                                <div class="btn-group">
-                                    <a href="{% url 'dogs:category_dogs' object.pk %}" type="button" class="btn btn-sm btn-outline-secondary">К собакам</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
+                {% block content %}
+                
+                {% endblock %}
             </div>
         </div>
 

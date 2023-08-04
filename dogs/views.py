@@ -9,7 +9,7 @@ def index(request):
         'title': 'Питомник - Добро пожаловать'
     }
 
-    return render(request, 'dogs/base.html', context)
+    return render(request, 'dogs/index.html', context)
 
 
 def categories(request):
@@ -18,7 +18,7 @@ def categories(request):
         'title': 'Питомник - Наши породы'
     }
 
-    return render(request, 'dogs/base.html', context)
+    return render(request, 'dogs/categories.html', context)
 
 
 def category_dogs(request, pk):
