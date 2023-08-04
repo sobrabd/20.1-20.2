@@ -15,7 +15,9 @@ class Category(models.Model):
 
 class Dog(models.Model):
     name = models.CharField(max_length=250, verbose_name='Кличка')
-    category = models.CharField(max_length=100, verbose_name='Порода')
+    # category = models.CharField(max_length=100, verbose_name='Порода')
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Порода')
+
     phot = models.ImageField(upload_to='dogs/', null=True, blank=True, verbose_name='Фото')
     birth_day = models.DateField(null=True, blank=True, verbose_name='Дата рождения')
 
